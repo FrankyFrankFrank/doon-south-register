@@ -37,17 +37,10 @@
 
         <div id="form" class="row">
 
-          @if(isset($success))
-            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-              <div class="alert alert-success text-center">
-                Thank you! You have Successfully Registered. <br />
-                <strong>Please check your email to confirm.</strong>
-              </div>
-            </div>
-          @endif
-
-          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-            <h1 class="text-center"><img src="{{ asset('img/doon-south-logo-2-colour-1.png') }}" alt="Doon South Naturally Embraced Living" class="doon-logo img-responsive"/></h1>
+          <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+            <h1 class="doon-logo text-center">
+              @include('logo')
+            </h1>
           </div>
 
           <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
