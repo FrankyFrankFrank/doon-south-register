@@ -13,17 +13,42 @@ class RegisterForNewsletterTest extends TestCase
      */
 
     public function testEmptyFormReturnsError()
-     {
+    {
        $this->visit('/')
        ->press('Register')
-       ->assertViewHas('errors');
-       dd($this->response);
-       dd( $this->response->original->getData());
-       dd($this->currentUri);
-       dd($this->app['session.store']->all());
-     }
+       ->see('The first-name field is required')
+       ->see('The last-name field is required')
+       ->see('The email field is required');
+    }
 
-    public function estRegisteringForNewsletter()
+    public function testEmptyFirstNameReturnsError()
+    {
+       $this->visit('/')
+       ->type('Doe', 'last-name')
+       ->type('john@example.com', 'email')
+       ->press('Register')
+       ->see('The first-name field is required');
+    }
+
+    public function testEmptyLastNameReturnsError()
+    {
+       $this->visit('/')
+       ->type('John', 'first-name')
+       ->type('john@example.com', 'email')
+       ->press('Register')
+       ->see('The last-name field is required');
+    }
+
+    public function testEmptyEmailNameReturnsError()
+    {
+       $this->visit('/')
+       ->type('John', 'first-name')
+       ->type('Doe', 'last-name')
+       ->press('Register')
+       ->see('The email field is required');
+    }
+
+    public function testRegisteringForNewsletter()
     {
 
       $this->visit('/')
