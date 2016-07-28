@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('temp.comingsoon');
 });
 
 Route::post('/submit', 'RegistrationController@store' )->name('register.submit');
