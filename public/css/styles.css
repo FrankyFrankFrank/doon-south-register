@@ -28,11 +28,12 @@
   -moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.22);
   box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.22);
 
-  -webkit-animation: wipein 1500ms; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: wipein 1500ms; /* Firefox < 16 */
-      -ms-animation: wipein 1500ms; /* Internet Explorer */
-       -o-animation: wipein 1500ms; /* Opera < 12.1 */
-          animation: wipein 1500ms;
+  -webkit-animation: wipein 800ms; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: wipein 800ms; /* Firefox < 16 */
+      -ms-animation: wipein 800ms; /* Internet Explorer */
+       -o-animation: wipein 800ms; /* Opera < 12.1 */
+          animation: wipein 800ms;
+          animation-timing-function: cubic-bezier(0.0, 0.0, 0.2, 1);
 }
 
 @keyframes wipein {
@@ -66,11 +67,11 @@ to   { width: 50%; }
 
 .form-half {
   padding-top:22px;
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 3s; /* Firefox < 16 */
-      -ms-animation: fadein 3s; /* Internet Explorer */
-       -o-animation: fadein 3s; /* Opera < 12.1 */
-          animation: fadein 3s;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s; /* Firefox < 16 */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera < 12.1 */
+          animation: fadein 1s;
 }
 
 @keyframes fadein {
